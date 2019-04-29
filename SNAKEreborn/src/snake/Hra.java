@@ -196,7 +196,9 @@ public class Hra {
                 this.score += 10;
                 this.zobrazovacScore.noveScore(this.score);
                 this.burger.spawn();
+                this.dlzkaBurger = 0;
                 this.srdce.spawn();
+                this.dlzkaSrdca = 0;
             } else if (this.had.zjedolPotravu(EnumSegment.BURGER)) {
                 this.score += 30;
                 this.zobrazovacScore.noveScore(this.score);
@@ -214,13 +216,14 @@ public class Hra {
         }
         if (this.burger.jeViditelny()) {
             ++this.dlzkaBurger;
+            System.out.println("Burger " + this.dlzkaBurger);
             if (this.dlzkaBurger == 35){
                 this.skryObjekt("burger");
             }
         }
         if (this.srdce.jeViditelny()) {
             ++this.dlzkaSrdca;
-            System.out.println(this.dlzkaSrdca);
+            System.out.println("Srdce " + this.dlzkaSrdca);
             if (this.dlzkaSrdca == 35){
                 this.skryObjekt("srdce");
             }

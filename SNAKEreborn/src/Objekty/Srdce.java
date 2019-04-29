@@ -28,7 +28,7 @@ public class Srdce extends Potrava {
         int sanca = this.random.nextInt(100) + 0;
         skry();
         skryStvorec();
-        if (sanca <= 1) {
+        if (sanca <= 99) {
             vytvor();
         }
     }

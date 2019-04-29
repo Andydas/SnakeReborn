@@ -27,7 +27,7 @@ public class Burger extends Potrava {
     
     public void spawn() {
         int sanca = this.random.nextInt(100) + 0;
-        if (sanca <= 10) {
+        if (sanca <= 99) {
             vytvor();
         }
     }
